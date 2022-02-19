@@ -1,0 +1,22 @@
+.deletetrans{
+    display: none;
+}
+
+.onhover:hover .deletetrans{
+    display: inline;
+    margin-left: -15px;
+}
+
+.cardstyle{
+    background-color: white;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: row;
+    min-width: '80vw';
+}
+
+@media (max-width:400px){
+    .onhover{
+        font-size: small;
+    }
+}
