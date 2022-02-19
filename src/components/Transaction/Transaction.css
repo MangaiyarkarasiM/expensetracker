@@ -1,10 +1,13 @@
 .deletetrans{
-    display: none;
+    opacity: 0;
+    position: absolute;
 }
 
+.onhover{
+    position: relative;
+}
 .onhover:hover .deletetrans{
-    display: inline;
-    margin-left: -15px;
+    opacity: 1;
 }
 
 .cardstyle{
@@ -12,11 +15,27 @@
     border: 1px solid white;
     display: flex;
     flex-direction: row;
-    min-width: '80vw';
+    margin-right: 5px;
+}
+
+.title{
+    margin-right: 8em;
 }
 
 @media (max-width:400px){
     .onhover{
         font-size: small;
+    }
+}
+
+@media (min-width:768px){
+    .title{
+        margin-right: 25em;
+    }
+}
+
+@media (min-width:400px) and (max-width:768px){
+    .title{
+        margin-right: 14em;
     }
 }

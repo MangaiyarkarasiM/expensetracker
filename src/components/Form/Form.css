@@ -1,0 +1,12 @@
+@media (min-width: 768px)
+{
+  .formstyle{
+      width: 30em;
+  }
+}
+
+@media (min-width:400px) and (max-width:768px){
+    .formstyle{
+        width: 18em;
+    }
+}

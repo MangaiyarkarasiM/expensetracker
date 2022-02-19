@@ -19,7 +19,7 @@ const expense = transaction?.filter((t)=> t.isExpense);
                 </div>
             </div>
             <div className="row">
-                <div className="mb-4">
+                <div className="mb-4 ml-4">
                     <button className="btn btn-warning" onClick={()=>{setShowEdit(true)}}>Add Expense</button>
                 </div>
             </div>

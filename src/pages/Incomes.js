@@ -16,8 +16,8 @@ const income = transaction?.filter((t)=> !t.isExpense);
                 <TransactionList income incomes={income} setShowEdit={setShowEdit} setId={setId}></TransactionList>
             </div>
             <div className="row">
-                <div className="mb-4">
-                    <button className="btn btn-success ml-2" onClick={()=>{setShowEdit(true)}}>Add Income</button>
+                <div className="mb-4 ml-4">
+                    <button className="btn btn-success" onClick={()=>{setShowEdit(true)}}>Add Income</button>
                 </div>
             </div>
             <div className="row">

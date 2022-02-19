@@ -1,5 +1,6 @@
 import React,{useContext,useEffect, useState} from "react";
 import {GlobalContext} from '../../context/globalContext';
+import './Form.css'
 
 function Form(props){
 const {transaction, editTransactions, addTransactions} = useContext(GlobalContext);
@@ -19,14 +20,14 @@ function onChangeInput(e){
 }
 
     return(
-        <div className="bg-white rounded p-4 ml-2">
-            <div className="d-flex justify-content-between mb-4">
-                <label className="mr-3">{props.income?'Income Title':'Expense Title'}</label>
-                <input type="text" name='title' value={trans?trans.title : ''} placeholder="Enter the title" onChange={onChangeInput}></input>
+        <div className="bg-white rounded p-4 ml-4">
+            <div className="formstyle d-flex flex-column mb-4">
+                <label className="">{props.income?'Income Title':'Expense Title'}</label>
+                <input className="border rounded " type="text" name='title' value={trans?trans.title : ''} placeholder="Enter the title" onChange={onChangeInput}></input>
             </div>
-            <div className="d-flex justify-content-between mb-4">
-                <label className="mr-3">Amount</label>
-                <input type="text" name='amount' value={trans?trans.amount: ''} placeholder="Enter the amount" onChange={onChangeInput}></input>
+            <div className="d-flex flex-column mb-4">
+                <label className="">Amount</label>
+                <input className="border rounded" type="text" name='amount' value={trans?trans.amount: ''} placeholder="Enter the amount" onChange={onChangeInput}></input>
             </div>
             <div className="d-flex justify-content-between">
                 {props.id? <button className="btn btn-info" onClick={()=>{editTransactions(trans); props.setShowEdit(false); props.setId(0)}}>Update</button>
